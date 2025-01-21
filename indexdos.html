@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Product App</title>
+    <!-- Bootswatch Cosmo Theme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+    
+    <link rel="stylesheet" href="estilos.css">
+
+
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">RESERVAS MEDIO ELEVACION FVSA</a>
+    </nav>
+
+    <div class="container">
+        <!-- APPLICATION -->
+        <div id="App" class="row pt-5">
+            <!-- FORM -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>REALICE SU RESERVA</h4>
+                    </div>
+                    <form id="form" class="card-body">
+                        <div class="form-group">
+                            <input type="textUsuario" id="usuario" placeholder="Nombre y apellido"
+                                class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="sector" placeholder="Sector" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            <select class="form-control" id="medioElevacion">
+                                <option selected>ELIJA AQUI</option>
+                                <option id="jlg_grande">PLUMA JLG 400</option>
+                                <option id="jlg_chica">PLUMA JLG 300</option>
+                                <option id="tijera">TIJERA HAULOTTE</option>
+                            </select>
+                            <label for="floatingSelectGrid"></label>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="date" id="fecha-inicio" step="0.01" placeholder="Desde" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <input type="date" id="fecha-fin" step="0.01" placeholder="Hasta" class="form-control" />
+                        </div>
+
+                        <button type="" id="ingresarDatos" value="Save" class="btn btn-primary btn-block">Ingresar
+                            datos</button>
+                        <button type="" id="obtenerDatos" value="Save" class="btn btn-primary btn-block">Obtener
+                            datos</button>
+                        <!-- Botón para borrar las reservas del localStorage -->
+                        <button id="borrarDatos" class="btn btn-primary btn-block">Borrar Reservas</button>
+                        <!-- <button id="modificarDatos" class="btn btn-primary btn-block">Modificar Reserva</button> -->
+
+                    </form>
+                </div>
+            </div>
+
+            <!-- PRODUCTS LIST -->
+            <div id="mostrarReserva" class="col-md-8 my-3"></div>
+            <div id="muestra" class="col-md-8 my-5"></div>
+        </div>
+    </div>
+    <p class="errorDos" id="muestraError"></p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.1/xlsx.full.min.js"></script>
+
+    <script src="fechas.js"></script>
+</body>
+
+</html>

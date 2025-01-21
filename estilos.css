@@ -1,0 +1,35 @@
+
+.contenedor{
+    padding: 50px;
+}
+
+.reserva{
+    justify-content: flex-start;
+    margin-left: 100px;
+    
+}
+.titulo-reserva{
+    margin-left: 800px;
+    width: 500px;
+}
+
+.muestra-reserva{
+    width: 200px;
+    padding: 20px;
+}
+.error{
+    display: flex;
+    padding: 10px;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+}
+.errorDos{
+    display: flex;
+    padding: 10px;
+    font-style: oblique;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
